@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    width: 90vw;
+    display: flex;
+}
+
+.panel {
+    flex: 0.5;
+    background-image: url(https://placehold.net/6-800x600.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel h3 {
+    position: absolute;
+    margin: 0;
+    bottom: 20px;
+    left: 45%;
+    font-size: 24px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    -webkit-transition: opacity 0.3s ease-in 0.4s;
+    -moz-transition: opacity 0.3s ease-in 0.4s;
+    -ms-transition: opacity 0.3s ease-in 0.4s;
+    -o-transition: opacity 0.3s ease-in 0.4s;
+}
